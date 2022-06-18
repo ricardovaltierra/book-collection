@@ -1,24 +1,55 @@
-# README
+# Instrucciones
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Version de Ruby requerida
 
-Things you may want to cover:
+ 3.1.2
 
-* Ruby version
+* Dependencias del sistema
 
-* System dependencies
+Postgresql 12
 
-* Configuration
+* Instalar dependencias
 
-* Database creation
+```bash
+bundle install
+```
 
-* Database initialization
+* Crear la base de datos
 
-* How to run the test suite
+```bash
+bin/rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Correr las pruebas
 
-* Deployment instructions
+```bash
+bin/rails test:system test
+```
 
-* ...
+* Implementar las funcionalidades necesarias para hacer pasar las pruebas. Ejemplo de salida esperada:
+
+```bash
+Running 4 tests in a single process (parallelization threshold is 50)
+Run options: --seed 32398
+
+# Running:
+
+DEBUGGER: Attaching after process 99628 fork to child process 99652
+Capybara starting Puma...
+* Version 5.6.4 , codename: Birdie's Version
+* Min threads: 0, max threads: 4
+* Listening on http://127.0.0.1:45227
+....
+
+Finished in 3.714372s, 1.0769 runs/s, 5.1153 assertions/s.
+4 runs, 19 assertions, 0 failures, 0 errors, 0 skips
+Running 2 tests in a single process (parallelization threshold is 50)
+Run options: --seed 6948
+
+# Running:
+
+..
+
+Finished in 0.034576s, 57.8433 runs/s, 115.6866 assertions/s.
+2 runs, 4 assertions, 0 failures, 0 errors, 0 skips
+```
