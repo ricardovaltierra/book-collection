@@ -1,4 +1,8 @@
 <tr>
   <td><%= book.name %></td>
   <td><%= book.author %></td>
+  <td><%= link_to "delete", book, 
+                            data: { "turbo-method": :delete,
+                                    turbo_confirm: "Are you sure?" } %>
+  </td>
 </tr>
