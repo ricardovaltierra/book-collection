@@ -1,0 +1,15 @@
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @books %>
+  </tbody>
+</table>
+
+<%= link_to "Add book", new_book_url %>
