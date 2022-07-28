@@ -12,6 +12,6 @@ class BookTest < ActiveSupport::TestCase
     book = Book.new
 
     assert_equal false, book.valid?
-    assert_equal true, book.errors.added?(:name, :blank)
+    assert_equal true, book.errors.added?(:author, :blank)
   end
 end
