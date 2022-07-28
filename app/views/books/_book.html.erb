@@ -1,7 +1,8 @@
 <tr>
   <td><%= book.name %></td>
   <td><%= book.author %></td>
-  <td><%= link_to "delete", book, 
+  <td><%= link_to "edit_book_#{book.id}", edit_book_path(book) %> | 
+      <%= link_to "delete_book_#{book.id}", book, 
                             data: { "turbo-method": :delete,
                                     turbo_confirm: "Are you sure?" } %>
   </td>
